@@ -109,7 +109,7 @@ The central nervous system. It handles the constant stream of data seamlessly:
 *(SCREENSHOT 1 : Show the NeuroManager Inspector with Simulation Mode enabled)*
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/e3cd145d-ca53-4c17-85b2-efc7303a5edc" width="80%" title="Hover Text">
+  <img src="https://github.com/user-attachments/assets/e3cd145d-ca53-4c17-85b2-efc7303a5edc" width="30%" title="Hover Text">
 </p>
 
 
