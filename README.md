@@ -128,3 +128,7 @@ A real-time diagnostic dashboard translating raw frequency bands into readable U
 </p>
 
 **Design Potential:** BCI inputs are inherently noisy and subjective. This tool acts as your live calibration matrix. During playtesting, observe how different events impact the player's cognitive baseline, and use that empirical data to define accurate `Threshold` and `Multiplier` values in your mechanics.
+
+---
+*Created for the MA Game Design Program at Ulster University.*
+
