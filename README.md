@@ -4,7 +4,7 @@
 
 Welcome! This toolkit is designed specifically for Game Designers and Technical Artists. It bridges the gap between the Emotiv EPOC X headset and Unity, allowing you to prototype mind-controlled game mechanics instantly without writing a single line of code.
 
-▶️ **[Watch the 3-Minute Video Tutorial]()** *(Note: Replace this with your actual video link)*
+▶️ **[Watch the 3-Minute Video Tutorial Here](INSERT_YOUTUBE_LINK_HERE)** *(Note: Replace this with your actual video link)*
 
 ---
 
@@ -107,18 +107,23 @@ The central nervous system. It handles the constant stream of data seamlessly:
 * 🏠 **Offline Simulation Mode:** Disconnects from the Emotiv API and feeds the game with dummy values from UI sliders. Perfect for working on assignments on your laptop!
 
 *(SCREENSHOT 1 : Show the NeuroManager Inspector with Simulation Mode enabled)*
+<img width="383" height="652" alt="image" src="https://github.com/user-attachments/assets/e3cd145d-ca53-4c17-85b2-efc7303a5edc" />
 
 
 ### 2. The Bridge (`NeuroObjectMapper.cs`)
 A highly modular translation layer. Instead of writing custom scripts, this grabs raw float data from the Hub and converts it into actionable gameplay using a Custom Editor (`NeuroObjectMapperEditor.cs`) to keep the UI clean. 
 
-*(SCREENSHOT 2 HERE: Show the NeuroObjectMapper Inspector on a Cube/Light)*
+*(SCREENSHOT 2 : Show the NeuroObjectMapper Inspector on a Cube/Light)*
+<img width="388" height="618" alt="image" src="https://github.com/user-attachments/assets/e9672872-06ee-4656-9f80-741bde8d260a" />
+<img width="383" height="646" alt="image" src="https://github.com/user-attachments/assets/74882903-d0ea-4801-860a-4312e8f3fc77" />
 
 
 ### 3. The Visualizer (`NeuroVisualDebugger.cs`)
 A lightweight diagnostic tool that reads raw band powers (Alpha, Beta, etc.) and translates them into smooth UI sliders. Use this "X-Ray" to balance your game's difficulty and find the perfect Threshold numbers!
 
-*( SCREENSHOT 3 HERE: Show the Game View with the 4 UI Sliders visible)*
+*(SCREENSHOT 3 : Show the Game View with the 4 UI Sliders visible)*
+<img width="1031" height="592" alt="image" src="https://github.com/user-attachments/assets/72eb18b8-d537-40cb-a08a-a03c823b8ef5" />
+
 
 
 ---
