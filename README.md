@@ -1,7 +1,12 @@
 # 🧠 NeuroDesign Toolkit for Unity
+
 **A 100% No-Code, Game-Feel focused framework for Brain-Computer Interface (BCI) Game Design.**
 
 Welcome! This toolkit is designed specifically for Game Designers and Technical Artists. It bridges the gap between the Emotiv EPOC X headset and Unity, allowing you to prototype mind-controlled game mechanics instantly without writing a single line of code.
+
+▶️ **[Watch the 3-Minute Video Tutorial]()** *(Note: Replace this with your actual video link)*
+
+---
 
 ## ✨ Key Features
 * **🚫 Zero Coding Required:** Connect brainwaves to any GameObject using a clean, context-sensitive Inspector UI.
@@ -43,6 +48,78 @@ Welcome! This toolkit is designed specifically for Game Designers and Technical 
 * **`NeuroManager` (The Engine):** The invisible brain of the system. It automatically handles background authentication, hardware connection, and data extraction. 
 * **`NeuroObjectMapper` (The Tool):** Your primary design tool. Attach this to anything you want to move, scale, rotate, or trigger. 
 * **`NeuroVisualDebugger` (The X-Ray):** A UI dashboard that shows you the raw frequencies of the player's brain in real-time. Use this to balance your game's difficulty!
+
+---
+
+## 🏗️ Under the Hood: System Architecture & Modularity
+
+For students and developers interested in extending this toolkit for their own advanced mechanics, the framework is built on a strict, 3-layer modular architecture. You don't need to touch the core to build upon it!
+
+```mermaid
+graph LR
+    %% Style Definitions
+    classDef hardware fill:#2d3436,stroke:#00b894,stroke-width:2px,color:#fff;
+    classDef core fill:#0984e3,stroke:#74b9ff,stroke-width:2px,color:#fff;
+    classDef tool fill:#6c5ce7,stroke:#a29bfe,stroke-width:2px,color:#fff;
+    classDef output fill:#e17055,stroke:#fab1a0,stroke-width:2px,color:#fff;
+    classDef sim fill:#e84393,stroke:#fd79a8,stroke-width:2px,stroke-dasharray: 5 5,color:#fff;
+
+    %% Hardware & API
+    subgraph Emotiv Ecosystem
+        HW[🧠 Emotiv EPOC X]:::hardware
+        API[🔌 Cortex API]:::hardware
+        HW -->|Bluetooth/Wi-Fi| API
+    end
+
+    %% Layer 1: Core Engine
+    subgraph Layer 1: The Engine Room
+        SIM[🎚️ Simulation Mode <br> Offline Sliders]:::sim
+        HUB((⚙️ NeuroDataManager <br> Core Data Hub)):::core
+        
+        API -->|Real-time Arrays| HUB
+        SIM -.->|Fake Float Data| HUB
+    end
+
+    %% Layer 2: Designer Tools
+    subgraph Layer 2: Designer Tools
+        MAPPER{🛠️ NeuroObjectMapper <br> Designer Bridge}:::tool
+        XRAY[📊 NeuroVisualDebugger <br> Dashboard UI]:::tool
+        
+        HUB ==>|Clean Float Values| MAPPER
+        HUB -->|Raw Band Powers| XRAY
+    end
+
+    %% Layer 3: Outputs
+    subgraph Layer 3: Gameplay Outputs
+        TRANSFORM[🧊 Transform <br> Move/Scale/Rotate]:::output
+        EVENTS[💡 Unity Events <br> Lights, Audio, Particles]:::output
+        SPAWN[📦 Spawner <br> Instantiate Prefabs]:::output
+        
+        MAPPER -->|Apply Multiplier/Threshold| TRANSFORM
+        MAPPER -->|Apply Multiplier/Threshold| EVENTS
+        MAPPER -->|Apply Multiplier/Threshold| SPAWN
+    end
+```
+
+### 1. The Core Data Hub (`NeuroDataManager.cs`)
+The central nervous system. It handles the constant stream of data seamlessly:
+* 🌐 **Real-Time Mode:** Automatically handshakes with the Emotiv Cortex API, bypasses known SDK bugs, and extracts pure array data directly from the headset.
+* 🏠 **Offline Simulation Mode:** Disconnects from the Emotiv API and feeds the game with dummy values from UI sliders. Perfect for working on assignments on your laptop!
+
+*(SCREENSHOT 1 : Show the NeuroManager Inspector with Simulation Mode enabled)*
+
+
+### 2. The Bridge (`NeuroObjectMapper.cs`)
+A highly modular translation layer. Instead of writing custom scripts, this grabs raw float data from the Hub and converts it into actionable gameplay using a Custom Editor (`NeuroObjectMapperEditor.cs`) to keep the UI clean. 
+
+*(SCREENSHOT 2 HERE: Show the NeuroObjectMapper Inspector on a Cube/Light)*
+
+
+### 3. The Visualizer (`NeuroVisualDebugger.cs`)
+A lightweight diagnostic tool that reads raw band powers (Alpha, Beta, etc.) and translates them into smooth UI sliders. Use this "X-Ray" to balance your game's difficulty and find the perfect Threshold numbers!
+
+*( SCREENSHOT 3 HERE: Show the Game View with the 4 UI Sliders visible)*
+
 
 ---
 *Created for the Game Design Master's Program.*
