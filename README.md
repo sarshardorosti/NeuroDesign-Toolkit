@@ -2,6 +2,8 @@
 
 **A 100% No-Code, Game-Feel focused framework for Brain-Computer Interface (BCI) Game Design.**
 
+🎓 **Exclusive Content:** *This toolkit and its documentation are created exclusively for the **MA Game Design** students at **Ulster University**.*
+
 Welcome! This toolkit is designed specifically for Game Designers and Technical Artists. It bridges the gap between the Emotiv EPOC X headset and Unity, allowing you to prototype mind-controlled game mechanics instantly without writing a single line of code.
 
 ---
@@ -143,4 +145,4 @@ Brainwaves are invisible, which makes game balancing a nightmare. This UI overla
 * **Potential:** Playtest your game, watch how the player's brain reacts in real-time, and use these exact numbers to tweak the `Threshold` in your Mappers. It’s your primary calibration tool.
 
 ---
-*Created for the Game Design Master's Program.*
+*Created for the MA Game Design Program at Ulster University.*
