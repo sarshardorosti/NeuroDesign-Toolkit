@@ -104,34 +104,47 @@ graph LR
 ### 1. The Core Data Hub (`NeuroDataManager.cs`)
 The central nervous system. It handles the constant stream of data seamlessly:
 * 🌐 **Real-Time Mode:** Automatically handshakes with the Emotiv Cortex API, bypasses known SDK bugs, and extracts pure array data directly from the headset.
-* 🏠 **Offline Simulation Mode:** Disconnects from the Emotiv API and feeds the game with dummy values from UI sliders. Perfect for working on assignments on your laptop!
-
-*(SCREENSHOT 1 : Show the NeuroManager Inspector with Simulation Mode enabled)*
+* 🏠 **Offline Simulation Mode:** Disconnects from the Emotiv API and feeds the game with dummy values.
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/e3cd145d-ca53-4c17-85b2-efc7303a5edc" width="30%" title="Hover Text">
+  <img src="https://github.com/user-attachments/assets/e3cd145d-ca53-4c17-85b2-efc7303a5edc" width="30%" title="Simulation Mode">
 </p>
 
+**Deep Dive: The Offline Simulator**
+No headset? No problem. Toggling `Simulation Mode` instantly unhooks the API and unlocks 20+ mock sliders. You can fake everything from a "Smile" to a "Push" command or raw "Alpha" waves.
+* **Potential:** Prototype mechanics, test event triggers, and build full levels on your laptop at a coffee shop. Zero hardware required.
+
+---
 
 ### 2. The Bridge (`NeuroObjectMapper.cs`)
-A highly modular translation layer. Instead of writing custom scripts, this grabs raw float data from the Hub and converts it into actionable gameplay using a Custom Editor (`NeuroObjectMapperEditor.cs`) to keep the UI clean. 
-
-*(SCREENSHOT 2 : Show the NeuroObjectMapper Inspector on a Cube/Light)*
+A highly modular translation layer. Instead of writing custom scripts, this grabs raw float data from the Hub and converts it into actionable gameplay. The UI is context-sensitive, meaning it hides irrelevant settings to keep your workspace clean.
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/e9672872-06ee-4656-9f80-741bde8d260a" width="25%" />
   <img src="https://github.com/user-attachments/assets/74882903-d0ea-4801-860a-4312e8f3fc77" width="25%" /> 
 </p>
 
+**Deep Dive: The Mapper Anatomy**
+Drop this onto any GameObject, and it becomes brain-aware. Here is how you control it:
+* **Input Signal:** Pick your poison. Want the object to react to Alpha waves, a blink, or high relaxation? Just select it from the dropdown.
+* **Game Feel (Settings):** Raw brain data is chaotic. Use `Multiplier` to amplify weak signals, and `Threshold` (with a visual slider) to create hard triggers (e.g., *only fire when Focus > 0.85*).
+* **Transform Mapping:** Bind brainwaves directly to Position, Rotation, or Scale. `Smooth Speed` uses Lerp to turn jittery brain spikes into buttery-smooth object movement.
+* **The Magic Port (Unity Events):** The ultimate hook. Link a brainwave spike to *anything* in Unity—turn on a light, play an audio clip, trigger an animation, or call your own custom C# methods.
+
+---
+
 ### 3. The Visualizer (`NeuroVisualDebugger.cs`)
-A lightweight diagnostic tool that reads raw band powers (Alpha, Beta, etc.) and translates them into smooth UI sliders. Use this "X-Ray" to balance your game's difficulty and find the perfect Threshold numbers!
+A lightweight diagnostic tool that reads raw band powers (Alpha, Beta, etc.) and translates them into smooth UI sliders.
 
 *(SCREENSHOT 3 : Show the Game View with the 4 UI Sliders visible)*
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/72eb18b8-d537-40cb-a08a-a03c823b8ef5" width="80%" title="Hover Text">
+  <img src="https://github.com/user-attachments/assets/72eb18b8-d537-40cb-a08a-a03c823b8ef5" width="80%" title="Dashboard X-Ray">
 </p>
 
+**Deep Dive: The X-Ray Dashboard**
+Brainwaves are invisible, which makes game balancing a nightmare. This UI overlays real-time, smoothed frequency data directly on your screen. 
+* **Potential:** Playtest your game, watch how the player's brain reacts in real-time, and use these exact numbers to tweak the `Threshold` in your Mappers. It’s your primary calibration tool.
 
 ---
 *Created for the Game Design Master's Program.*
