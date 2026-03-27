@@ -4,8 +4,6 @@
 
 Welcome! This toolkit is designed specifically for Game Designers and Technical Artists. It bridges the gap between the Emotiv EPOC X headset and Unity, allowing you to prototype mind-controlled game mechanics instantly without writing a single line of code.
 
-▶️ **[Watch the 3-Minute Video Tutorial Here](INSERT_YOUTUBE_LINK_HERE)** *(Note: Replace this with your actual video link)*
-
 ---
 
 ## ✨ Key Features
@@ -135,8 +133,6 @@ Drop this onto any GameObject, and it becomes brain-aware. Here is how you contr
 
 ### 3. The Visualizer (`NeuroVisualDebugger.cs`)
 A lightweight diagnostic tool that reads raw band powers (Alpha, Beta, etc.) and translates them into smooth UI sliders.
-
-*(SCREENSHOT 3 : Show the Game View with the 4 UI Sliders visible)*
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/72eb18b8-d537-40cb-a08a-a03c823b8ef5" width="80%" title="Dashboard X-Ray">
