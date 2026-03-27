@@ -107,7 +107,10 @@ The central nervous system. It handles the constant stream of data seamlessly:
 * 🏠 **Offline Simulation Mode:** Disconnects from the Emotiv API and feeds the game with dummy values from UI sliders. Perfect for working on assignments on your laptop!
 
 *(SCREENSHOT 1 : Show the NeuroManager Inspector with Simulation Mode enabled)*
-<img width="383" height="652" alt="image" src="https://github.com/user-attachments/assets/e3cd145d-ca53-4c17-85b2-efc7303a5edc" />
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/e3cd145d-ca53-4c17-85b2-efc7303a5edc" width="80%" title="Hover Text">
+</p>
 
 
 ### 2. The Bridge (`NeuroObjectMapper.cs`)
