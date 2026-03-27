@@ -117,16 +117,20 @@ The central nervous system. It handles the constant stream of data seamlessly:
 A highly modular translation layer. Instead of writing custom scripts, this grabs raw float data from the Hub and converts it into actionable gameplay using a Custom Editor (`NeuroObjectMapperEditor.cs`) to keep the UI clean. 
 
 *(SCREENSHOT 2 : Show the NeuroObjectMapper Inspector on a Cube/Light)*
-<img width="388" height="618" alt="image" src="https://github.com/user-attachments/assets/e9672872-06ee-4656-9f80-741bde8d260a" />
-<img width="383" height="646" alt="image" src="https://github.com/user-attachments/assets/74882903-d0ea-4801-860a-4312e8f3fc77" />
 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/e9672872-06ee-4656-9f80-741bde8d260a" width="25%" />
+  <img src="https://github.com/user-attachments/assets/74882903-d0ea-4801-860a-4312e8f3fc77" width="25%" /> 
+</p>
 
 ### 3. The Visualizer (`NeuroVisualDebugger.cs`)
 A lightweight diagnostic tool that reads raw band powers (Alpha, Beta, etc.) and translates them into smooth UI sliders. Use this "X-Ray" to balance your game's difficulty and find the perfect Threshold numbers!
 
 *(SCREENSHOT 3 : Show the Game View with the 4 UI Sliders visible)*
-<img width="1031" height="592" alt="image" src="https://github.com/user-attachments/assets/72eb18b8-d537-40cb-a08a-a03c823b8ef5" />
 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/72eb18b8-d537-40cb-a08a-a03c823b8ef5" width="80%" title="Hover Text">
+</p>
 
 
 ---
