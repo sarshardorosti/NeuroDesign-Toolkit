@@ -1,14 +1,14 @@
-# 🧠 NeuroDesign Toolkit for Unity
+#  NeuroDesign Toolkit for Unity
 
 **A 100% No-Code, Game-Feel focused framework for Brain-Computer Interface (BCI) Game Design.**
 
-🎓 **Exclusive Content:** *This toolkit and its documentation are created exclusively for the **MA Game Design** students at **Ulster University**.*
+ **Exclusive Content:** *This toolkit and its documentation are created exclusively for the **MA Game Design** students at **Ulster University**.*
 
 This toolkit bridges the gap between the Emotiv EPOC X headset and Unity. It is designed to help Game Designers and Technical Artists prototype mind-controlled mechanics, test systemic interactions, and iterate rapidly without writing code.
 
 ---
 
-## ✨ Core Capabilities
+##  Core Capabilities
 * **Systemic Integration:** Map raw brainwave data or mental commands to any GameObject via a context-sensitive Inspector UI.
 * **Game-Feel Calibration:** Granular control over mechanic responsiveness using built-in `Multiplier`, `Threshold`, and `Smooth Speed` (Lerp) algorithms.
 * **Offline Prototyping:** A robust "Simulation Mode" allowing level design and logic testing without physical headset hardware.
@@ -16,7 +16,7 @@ This toolkit bridges the gap between the Emotiv EPOC X headset and Unity. It is 
 
 ---
 
-## 🚀 Installation Guide
+##  Installation Guide
 
 1. Download the `NeuroDesignToolkit_v1.0.unitypackage` from the **[Releases](../../releases)** tab. *(Alternatively, find it in the repository files).*
 2. Open your Unity Project (3D/URP/Standard supported).
@@ -25,7 +25,7 @@ This toolkit bridges the gap between the Emotiv EPOC X headset and Unity. It is 
 
 ---
 
-## 🕹️ Quick Start: Basic Setup
+## Quick Start: Basic Setup
 
 ### Step 1: Initialize the Engine
 1. Navigate to your `Assets/Prefabs` folder.
@@ -43,7 +43,7 @@ This toolkit bridges the gap between the Emotiv EPOC X headset and Unity. It is 
 
 ---
 
-## 🏗️ Architecture & Modularity
+##  Architecture & Modularity
 
 The framework utilizes a decoupled, 3-layer architecture, allowing advanced students to extend its functionality safely.
 
